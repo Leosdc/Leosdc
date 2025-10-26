@@ -2,7 +2,6 @@
 
 <img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
 
-🎯 Analista de Operações de TI no [ASAAS](https://asaas.com)  
 💻 Apaixonado por automações, cloud e bots inteligentes  
 🐶 Pai da Paçoca 🐾  
 💍 Marido da Ana Alice!
