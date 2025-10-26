@@ -1,10 +1,13 @@
 # 👋 Olá, eu sou o Leonardo!
 
-<img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
+<img src="https://i.pinimg.com/originals/d1/4f/4e/d14f4e0901f6ca4216ad5ed27cfb91cd.gif" width="360" align="right" style="border-radius: 50%" />
 
-💻 Apaixonado por automações, cloud e bots inteligentes  
+💻 10 anos atuando com TI e apaixonado por automações e IA  
 💍 Marido da Ana Alice  
 🐶 Pai da [Paçoca](https://www.instagram.com/pacoca_pc/)  
+🤖 Criador do discord bot de RPG “Lyra the Wise”  
+🤖 Criador do bot de conversação “Sakura”
+<br><br>
 
 ---
 
@@ -30,8 +33,7 @@
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Leosdc&layout=compact&theme=tokyonight)
 
 ## 🌟 Destaques
-- 🤖 Criador do discord bot de RPG “Lyra the Wise” 
-- 🤖 Criador do bot de conversação “Sakura”
+
 
 ---
 
