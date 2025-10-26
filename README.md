@@ -3,8 +3,8 @@
 <img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
 
 💻 Apaixonado por automações, cloud e bots inteligentes  
-💍 Marido da Ana Alice!  
-🐶 Pai da Paçoca 🐾  
+💍 Marido da Ana Alice  
+🐶 Pai da [Paçoca](https://www.instagram.com/pacoca_pc/)  
 
 ---
 
