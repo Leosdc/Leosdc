@@ -1,5 +1,7 @@
 # 👋 Olá, eu sou o Leonardo!
 
+<img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
+
 🎯 Analista de Operações de TI no [ASAAS](https://asaas.com)  
 💻 Apaixonado por automações, cloud e bots inteligentes  
 🐶 Pai da Paçoca 🐾  
@@ -23,7 +25,7 @@
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Leosdc&layout=compact&theme=tokyonight)
 
 ## 🌟 Destaques
-- 🤖 Criador do discord bot de RPG “Lyra the Wise” <img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
+- 🤖 Criador do discord bot de RPG “Lyra the Wise” 
 - 🤖 Criador do bot de conversação “Sakura”
 
 ---
