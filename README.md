@@ -1,3 +1,5 @@
+<img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
+
 # 👋 Olá, eu sou o Leonardo!
 
 🎯 Analista de Operações de TI no [ASAAS](https://asaas.com)  
