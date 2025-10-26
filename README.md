@@ -8,7 +8,7 @@
 
 ---
 
-# **Sobre o que uso para meus projetos:**
+## **Sobre o que uso para meus projetos:**
 
 ## 💻 Linguagens de Programação
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
