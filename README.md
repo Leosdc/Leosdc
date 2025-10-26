@@ -16,6 +16,12 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=github-actions&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white)
 
+## 🦊 Estatísticas
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Leosdc&show_icons=true&theme=tokyonight&icon_color=58A6FF)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Leosdc&layout=compact&theme=tokyonight)
+
 ## 🌟 Destaques
 - 🤖 Criador do discord bot de RPG “Lyra the Wise” <img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
 - 🤖 Criador do bot de conversação “Sakura”
