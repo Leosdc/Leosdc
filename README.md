@@ -6,7 +6,7 @@
 💍 Marido da Ana Alice  
 🐶 Pai da [Paçoca](https://www.instagram.com/pacoca_pc/)  
 🤖 Criador do bot de RPG “Lyra the Wise”  
-🤖 Criador do bot de conversação “Sakura”
+🤖 Criador do bot de conversação “Sakura”  
 🎲 Amante de World of Warcraft
 
 <br><br>
