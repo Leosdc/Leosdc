@@ -9,8 +9,6 @@
 🤖 Criador do bot de conversação “Sakura”  
 🎲 Amante de World of Warcraft
 
-<br><br>
-
 ---
 ## 🚀 Tecnologias
 
