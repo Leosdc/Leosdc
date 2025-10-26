@@ -1,5 +1,3 @@
-<img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
-
 # 👋 Olá, eu sou o Leonardo!
 
 🎯 Analista de Operações de TI no [ASAAS](https://asaas.com)  
@@ -19,10 +17,14 @@
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white)
 
 ## 🌟 Destaques
-- 🤖 Criador do discord bot de RPG “Lyra the Wise”
+- 🤖 Criador do discord bot de RPG “Lyra the Wise” <img src="https://avatars.githubusercontent.com/Leosdc" width="120" align="right" style="border-radius: 50%" />
 - 🤖 Criador do bot de conversação “Sakura”
-- 🧠 Foco em IA aplicada à automação de processos
 
 ---
 
-📫 **Contato:** [LinkedIn](https://linkedin.com/in/leonardodacruz) • [GitHub](https://github.com/Leosdc)
+## 📫 Contato
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/leonardo-da-cruz)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/Leosdc)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/SdWnWJ6w)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:leonardo.dc.work@gmail.com)
