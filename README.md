@@ -8,6 +8,7 @@
 🤖 Criador do bot de RPG “Lyra the Wise”  
 🤖 Criador do bot de conversação “Sakura”  
 🎲 Amante de World of Warcraft
+<br>
 
 ---
 ## 🚀 Tecnologias
