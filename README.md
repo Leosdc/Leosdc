@@ -18,6 +18,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white)
 
+### 🤖 LLM e TTS
+![Groq API](https://img.shields.io/badge/Groq-Llama_3.3_70B-orange.svg)
+
 ### ☁️ Cloud & Infraestrutura
 ![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white)
