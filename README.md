@@ -34,14 +34,6 @@
 
 ---
 
-## 🦊 Estatísticas
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Leosdc&show_icons=true&theme=tokyonight&icon_color=58A6FF)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Leosdc&layout=compact&theme=tokyonight)
-
----
-
 ## 📫 Contato
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/leonardo-da-cruz)
