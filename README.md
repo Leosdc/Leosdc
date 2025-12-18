@@ -41,5 +41,4 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/leonardo-da-cruz)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/Leosdc)
 [![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/SdWnWJ6w)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:leonardo.dc.work@gmail.com)
 [![Ko-fi](https://img.shields.io/badge/Ko%E2%80%91fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/leosdc)
