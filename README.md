@@ -24,6 +24,7 @@
 ### 🤖 LLM e TTS
 ![Groq API](https://img.shields.io/badge/Groq-Llama_3.3_70B-orange.svg)
 ![Stable Diffusion](https://img.shields.io/badge/Stable%20Diffusion-XL%2F1.5-0b3d91?logo=stabilityai&logoColor=white)
+![ComfyUI](https://img.shields.io/badge/ComfyUI-Desktop-6B46C1?logo=artifacthub&logoColor=white)
 
 ### ☁️ Cloud & Infraestrutura
 ![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white)
