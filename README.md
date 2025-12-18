@@ -8,6 +8,7 @@
 
 🤖 Criador do bot de RPG “[Lyra the Wise](https://github.com/Leosdc/lyra-the-wise)”  
 🤖 Criador do bot de conversação “[Sakura](https://github.com/Leosdc/sakura)”  
+🤖 Criador de imagens por AI com Stable Diffusion e ComfyUI
 🎲 Amante de World of Warcraft
 <br><br>
 
