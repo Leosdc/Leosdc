@@ -68,7 +68,7 @@ Website estático com conteúdo interativo.
 🔹 HTML, CSS e JavaScript  
 🔹 Projeto pessoal e experimental  
 
-🔗 https://leosdc.github.io/index.html
+🔗 https://leosdc.github.io/mundo-da-alice/
 
 ---
 
