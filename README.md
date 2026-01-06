@@ -6,11 +6,11 @@
 💍 Marido da Ana Alice  
 🐶 Pai da [Paçoca](https://www.instagram.com/pacoca_pc/)  
 
-🤖 Criador do bot de RPG “[Lyra the Wise](https://github.com/Leosdc/lyra-the-wise)”  
-🤖 Criador do bot de conversação “[Sakura](https://github.com/Leosdc/sakura)”  
-🤖 Criador do website "[Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)"  
-🤖 Criador de imagens por IA com Stable Diffusion e ComfyUI  
-🎲 Amante de World of Warcraft  
+🎲 Criador do bot de RPG “[Lyra the Wise](https://github.com/Leosdc/lyra-the-wise)”  
+🗨️ Criador do bot de conversação “[Sakura](https://github.com/Leosdc/sakura)”  
+🌌 Criador do website "[Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)"  
+📷 Criador de imagens por IA com Stable Diffusion e ComfyUI  
+🕹️ Amante de World of Warcraft  
 
 ---
 
