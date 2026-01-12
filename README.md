@@ -34,7 +34,6 @@
 🎨 **IA criativa**
 - Geração de imagens com Stable Diffusion e ComfyUI  
 - Ajuste de prompts, workflows e pipelines visuais  
-- Projetos que misturam arte, código e curiosidade  
 
 ---
 
