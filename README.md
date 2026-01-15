@@ -9,6 +9,7 @@
 🎲 Criador do bot de RPG “[Lyra the Wise](https://github.com/Leosdc/lyra-the-wise)”  
 🗨️ Criador do bot de conversação “[Sakura](https://github.com/Leosdc/sakura)”  
 🌌 Criador do website "[Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)"  
+🕹️ Criador do jogo mau feito "[Neon Wars](https://leosdc.github.io/territory/)"  
 📷 Criador de imagens por IA com Stable Diffusion e ComfyUI  
 🕹️ Amante de World of Warcraft  
 
