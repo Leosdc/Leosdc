@@ -10,7 +10,7 @@
 🗨️ Criador do bot de conversação “[Sakura](https://github.com/Leosdc/sakura)”  
 🌌 Criador do website "[Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)"  
 🕹️ Criador do jogo mau feito "[Neon Wars](https://leosdc.github.io/territory/)"  
-📷 Criador de imagens por IA com Stable Diffusion e ComfyUI  
+📷 Criador de imagens por IA com Stable Diffusion
 🕹️ Amante de World of Warcraft  
 
 ---
