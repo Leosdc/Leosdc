@@ -1,7 +1,5 @@
 # 👋 Olá, eu sou o Leonardo!
 
-<img src="https://i.pinimg.com/originals/d1/4f/4e/d14f4e0901f6ca4216ad5ed27cfb91cd.gif" width="400" align="right" style="border-radius: 50%" />
-
 💻 10 anos atuando com TI e apaixonado por automações e IA  
 💍 Marido da Ana Alice  
 🐶 Pai da [Paçoca](https://www.instagram.com/pacoca_pc/)  
