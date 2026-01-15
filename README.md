@@ -1,4 +1,4 @@
-# 👋 Olá, eu sou o Leonardo!
+# Olá, eu sou o Leonardo!
 
 💻 10 anos atuando com TI e apaixonado por automações e IA  
 💍 Marido da Ana Alice  
