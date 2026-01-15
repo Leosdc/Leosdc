@@ -18,7 +18,7 @@
 
 🤖 **Bots, agentes e experimentos com IA**  
 - Bots de conversação, RPG e narrativa interativa  
-- Integração com LLMs (Groq) e APIs externas  
+- Integração com LLMs (Groq, Gemini) e APIs externas  
 - Fluxos de conversa, contexto e automações  
 
 ⚙️ **Automações para facilitar a vida**
