@@ -37,7 +37,7 @@
 
 ## 🧩 Projetos em destaque
 
-### 🤖 [Lyra the Wise](https://github.com/Leosdc/lyra-the-wise)
+### 🤖 [Lyra the Wise](lyrathewise.lat)
 Bot de RPG com IA focado em narrativa, escolhas e imersão.
 
 🔹 LLM para interpretação de contexto  
