@@ -41,7 +41,7 @@
 ## 🧩 Projetos em destaque
 
 ### 🤖 [Lyra the Wise](https://leosdc.github.io/lyra-the-wise-webapp)
-Bot de RPG com IA focado em narrativa, escolhas e imersão.
+Website completo de RPG de mesa com IA focado em narrativa, escolhas e imersão.
 
 🔹 LLM para interpretação de contexto  
 🔹 Sistema modular de histórias  
@@ -50,7 +50,7 @@ Bot de RPG com IA focado em narrativa, escolhas e imersão.
 ---
 
 ### 🤖 [Sakura](https://github.com/Leosdc/sakura)
-Bot de conversação com foco em interações naturais.
+Discord Bot de conversação com foco em interações naturais.
 
 🔹 Integrações com APIs  
 🔹 Fluxos conversacionais e automações  
@@ -59,7 +59,7 @@ Bot de conversação com foco em interações naturais.
 ---
 
 ### 🌐 [Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)
-Website estático com conteúdo interativo.
+Website estático com conteúdo interativo para organizar livros, séries e filmes.
 
 🔹 HTML, CSS e JavaScript  
 🔹 Projeto pessoal e experimental  
