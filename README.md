@@ -84,7 +84,7 @@ Website estático com conteúdo interativo para organizar livros, séries e film
 ---
 
 ### 🤖 IA, LLM & Geração de Conteúdo
-![Groq API](https://img.shields.io/badge/Groq-Llama_3.3_70B-orange.svg)
+![Gemini API](https://img.shields.io/badge/Gemini-3.0-blue.svg)
 ![Stable Diffusion](https://img.shields.io/badge/Stable%20Diffusion-XL%2F1.5-0b3d91?logo=stabilityai&logoColor=white)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Desktop-6B46C1?logo=artifacthub&logoColor=white)
 
