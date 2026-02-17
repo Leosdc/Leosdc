@@ -1,7 +1,7 @@
 # Olá, eu sou o Leonardo!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Leosdc/lyra-the-wise-webapp/main/assets/extra/library.gif" width="600" alt="Lyra Library">
+  <img src="https://github.com/Leosdc/lyra-the-wise-webapp/blob/main/public/assets/extra/library.gif" width="600" alt="Lyra Library">
 </p>
 
 💻 10 anos atuando com TI e apaixonado por automações e IA  
