@@ -40,7 +40,7 @@
 
 ## 🧩 Projetos em destaque
 
-### 🤖 [Lyra the Wise](https://leosdc.github.io/lyra-the-wise-webapp)
+### 🤖 [Lyra the Wise](https://github.com/Leosdc/lyra-the-wise-webapp)
 Website completo de RPG de mesa com IA focado em narrativa, escolhas e imersão.
 
 🔹 LLM para interpretação de contexto  
