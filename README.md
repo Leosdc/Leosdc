@@ -8,9 +8,8 @@
 💍 Marido da Ana Alice  
 🐶 Pai da [Paçoca](https://www.instagram.com/pacoca_pc/)  
 
-🎲 Criador do website de RPG “[Lyra the Wise](https://lyrathewise.lat)”  
-🗨️ Criador do bot de conversação “[Sakura](https://github.com/Leosdc/sakura)”  
-🌌 Criador do website para organização de livros lidos e séries/filmes assistidos "[Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)"  
+🎲 Criador do webapp de RPG “[Lyra the Wise](https://lyrathewise.lat)”  
+🌌 Criador do webapp para organização de livros lidos e séries/filmes assistidos "[Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)"  
 🕹️ Criador do jogo mau feito "[Neon Wars](https://leosdc.github.io/territory/)"  
 
 ---
@@ -46,15 +45,6 @@ Website completo de RPG de mesa com IA focado em narrativa, escolhas e imersão.
 🔹 LLM para interpretação de contexto  
 🔹 Sistema modular de histórias  
 🔹 Projeto focado em criatividade e storytelling  
-
----
-
-### 🤖 [Sakura](https://github.com/Leosdc/sakura)
-Discord Bot de conversação com foco em interações naturais.
-
-🔹 Integrações com APIs  
-🔹 Fluxos conversacionais e automações  
-🔹 Estudo prático de LLMs  
 
 ---
 
