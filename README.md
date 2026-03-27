@@ -35,6 +35,11 @@ HTML · CSS · JavaScript
 
 ---
 
+### 🌐 [OS Exploit](https://leosdc.github.io/OS-Exploit/)
+Site para lembrar aquele comando básico que seu cérebro esqueceu.
+
+---
+
 ### 🕹️ [Neon Wars](https://leosdc.github.io/territory/)
 Jogo de conquista de território super mal feito com estética neon.
 
