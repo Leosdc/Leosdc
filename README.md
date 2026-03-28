@@ -44,6 +44,11 @@ Jogo de conquista de território super mal feito com estética neon.
 
 ---
 
+### ⚖️ [Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/)
+Site para democratizar o acesso à justiça no Brasil.
+
+---
+
 ## 🛠️ O que faço
 
 `Bots e agentes com IA` · `Automações com n8n e Google Apps Script`  
