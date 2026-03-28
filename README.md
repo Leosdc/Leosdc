@@ -31,7 +31,6 @@ Webapp de notícias com vibe própria.
 
 ### 🌐 [Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)
 Organizador pessoal de livros, séries e filmes.
-HTML · CSS · JavaScript
 
 ---
 
