@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo da Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:       #05080d;
+  --glass:    rgba(255,255,255,0.04);
+  --glass-b:  rgba(255,255,255,0.08);
+  --border:   rgba(255,255,255,0.07);
+  --border-h: rgba(255,255,255,0.15);
+  --text:     #e4eaf2;
+  --muted:    rgba(200,215,230,0.45);
+  --cyan:     #00e5ff;
+  --orange:   #ff7043;
+  --gold:     #ffc107;
+  --mono:     'DM Mono', monospace;
+  --serif:    'DM Serif Display', serif;
+  --sans:     'Syne', sans-serif;
+}
+
+html, body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  overflow-x: hidden;
+}
+
+/* ── CANVAS ── */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── SCANLINES ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(0,229,255,0.012) 3px, rgba(0,229,255,0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── LAYOUT ── */
+.page {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+/* ── HEADER ── */
+.header {
+  margin-bottom: 48px;
+  animation: fadeUp .7s ease both;
+  text-align: center;
+}
+
+.header-meta {
+  font-size: 10px;
+  letter-spacing: .22em;
+  color: var(--cyan);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: .7;
+}
+
+.header-name {
+  font-family: var(--serif);
+  font-size: clamp(48px, 10vw, 76px);
+  line-height: .95;
+  letter-spacing: -.02em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.header-name em {
+  font-style: italic;
+  color: var(--cyan);
+}
+
+.header-sub {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: .04em;
+  margin-top: 16px;
+  line-height: 1.8;
+}
+
+.header-sub a { color: var(--orange); text-decoration: none; }
+.header-sub a:hover { text-decoration: underline; }
+
+/* ── SOCIALS ── */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+  animation: fadeUp .7s .1s ease both;
+  justify-content: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: .08em;
+  transition: background .2s, border-color .2s, color .2s;
+  backdrop-filter: blur(8px);
+}
+
+.pill:hover {
+  background: var(--glass-b);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.pill svg { width: 12px; height: 12px; fill: currentColor; flex-shrink: 0; }
+
+/* ── RULE ── */
+.rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 44px 0;
+}
+
+/* ── BENTO GRID ── */
+.bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  animation: fadeUp .7s .2s ease both;
+}
+
+/* section label */
+.section-label {
+  grid-column: 1 / -1;
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+  padding-left: 2px;
+}
+
+/* glass card */
+.card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 22px 22px 20px;
+  backdrop-filter: blur(16px);
+  transition: border-color .25s, background .25s, transform .2s;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  background: radial-gradient(ellipse at top left, rgba(0,229,255,.06), transparent 70%);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.card:hover {
+  border-color: var(--border-h);
+  background: rgba(255,255,255,0.065);
+  transform: translateY(-2px);
+}
+
+.card:hover::before { opacity: 1; }
+
+/* featured card spans 2 cols */
+.card.featured {
+  grid-column: 1 / -1;
+  background: rgba(0,229,255,.04);
+  border-color: rgba(0,229,255,.18);
+}
+
+.card.featured::before {
+  background: radial-gradient(ellipse at top left, rgba(0,229,255,.1), transparent 60%);
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 22px;
+  margin-bottom: 14px;
+  display: block;
+  line-height: 1;
+}
+
+.card-name {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: -.01em;
+}
+
+.card.featured .card-name { color: var(--cyan); font-size: 18px; }
+
+.card-desc {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid rgba(0,229,255,.25);
+  padding: 3px 8px;
+  border-radius: 2px;
+  background: rgba(0,229,255,.06);
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  font-size: 16px;
+  color: var(--border-h);
+  transition: color .2s, transform .2s;
+}
+
+.card:hover .card-arrow {
+  color: var(--cyan);
+  transform: translate(2px,-2px);
+}
+
+/* ── SKILLS ── */
+.skills-block {
+  margin-top: 44px;
+  animation: fadeUp .7s .3s ease both;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill {
+  font-size: 11px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--muted);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  letter-spacing: .06em;
+  transition: border-color .2s, color .2s;
+}
+
+.skill:hover { border-color: var(--orange); color: var(--orange); }
+
+/* ── FOOTER ── */
+.footer {
+  margin-top: 56px;
+  font-size: 10px;
+  color: rgba(200,215,230,.2);
+  letter-spacing: .1em;
+  text-align: center;
+  animation: fadeUp .7s .4s ease both;
+}
+
+.footer span { color: var(--orange); }
+
+/* ── ANIM ── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+@media (max-width: 520px) {
+  .bento { grid-template-columns: 1fr; }
+  .card.featured { grid-column: 1; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-meta">software 3.0 orchestrator · agentic systems · creative engineering</div>
+    <h1 id="header-name" class="header-name">Leonardo<br><em>da Cruz</em></h1>
+    <p class="header-sub">
+      +10 anos em TI · Automações, IA e experimentos criativos<br>
+      Marido da Ana Alice · Pai da <a href="https://www.instagram.com/pacoca_pc/" target="_blank">Paçoca 🐶</a>
+    </p>
+
+    <div class="socials">
+      <a class="pill" href="https://linkedin.com/in/leonardo-da-cruz" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.997 23.227 23.997 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+        LinkedIn
+      </a>
+      <a class="pill" href="https://github.com/Leosdc" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+      <a class="pill" href="https://discord.gg/SdWnWJ6w" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.079.112 18.1.13 18.114a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.201 13.201 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        Discord
+      </a>
+      <a class="pill" href="https://ko-fi.com/leosdc" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+        Ko-fi
+      </a>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <!-- BENTO GRID -->
+  <div class="bento">
+    <div class="section-label">// projetos</div>
+
+    <!-- FEATURED -->
+    <a class="card featured" href="https://lyrathewise.lat" target="_blank">
+      <span class="card-badge">destaque</span>
+      <span class="card-icon">🤖</span>
+      <div class="card-name">Lyra the Wise</div>
+      <div class="card-desc">RPG de mesa com IA — narrativa, escolhas e imersão total. LLM para interpretação de contexto, sistema modular de histórias.</div>
+      <span class="card-arrow">↗</span>
+    </a>
+
+    <a class="card" href="https://thevibegazette.lat" target="_blank">
+      <span class="card-icon">📰</span>
+      <div class="card-name">The Vibe Gazette</div>
+      <div class="card-desc">Publicação sobre vibe coding e engenharia agêntica. Software 3.0 na prática.</div>
+      <span class="card-arrow">↗</span>
+    </a>
+
+    <a class="card" href="https://leosdc.github.io/OS-Exploit/" target="_blank">
+      <span class="card-icon">💻</span>
+      <div class="card-name">OS Exploit</div>
+      <div class="card-desc">Aquele comando básico que seu cérebro esqueceu. 600+ atalhos, bilíngue, com partículas.</div>
+      <span class="card-arrow">↗</span>
+    </a>
+
+    <a class="card" href="https://leosdc.github.io/mundo-da-alice/" target="_blank">
+      <span class="card-icon">🌐</span>
+      <div class="card-name">Mundo da Alice</div>
+      <div class="card-desc">Organizador pessoal de livros, séries e filmes.</div>
+      <span class="card-arrow">↗</span>
+    </a>
+
+    <a class="card" href="https://leosdc.github.io/territory/" target="_blank">
+      <span class="card-icon">🕹️</span>
+      <div class="card-name">Neon Wars</div>
+      <div class="card-desc">Jogo de conquista de território com estética neon. Super mal feito e divertido.</div>
+      <span class="card-arrow">↗</span>
+    </a>
+
+    <a class="card" href="https://leosdc.github.io/Guia-do-Cidadao/" target="_blank">
+      <span class="card-icon">⚖️</span>
+      <div class="card-name">Guia do Cidadão</div>
+      <div class="card-desc">Democratizando o acesso à justiça no Brasil via IA.</div>
+      <span class="card-arrow">↗</span>
+    </a>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills-block">
+    <div class="section-label">// o que faço</div>
+    <div class="skills-grid">
+      <span class="skill">Bots e agentes com IA</span>
+      <span class="skill">n8n · Google Apps Script</span>
+      <span class="skill">AWS · Cloudflare</span>
+      <span class="skill">Firebase · Firestore</span>
+      <span class="skill">Stable Diffusion</span>
+      <span class="skill">Vite · TypeScript</span>
+    </div>
+  </div>
+
+  <div class="footer">feito com <span>♥</span></div>
+
+</div>
+
+<script>
+(function () {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx    = canvas.getContext('2d');
+  let W, H;
+  const mouse = { x: -9999, y: -9999 };
+  let click = null;
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+
+  window.addEventListener('resize', resize);
+  window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+  
+  // ── PARAMS ──
+  const IS_MOBILE      = window.innerWidth < 768;
+  const COUNT          = IS_MOBILE ? 800 : 3000;
+  const REPEL_RADIUS   = 80;
+  const REPEL_FORCE    = 1.2;
+  const ATTRACT_RADIUS = 1200;
+  const ATTRACT_FORCE  = 1.5; // Mais forte para formar rápido
+  const FRICTION       = 0.95;
+  const DRIFT_PULL     = 0.04;
+
+  // ── ESTADO DE HOVER/CLICK ──
+  let activeTargets = null;
+  let activeCenter  = { x: 0, y: 0 };
+  let hoverCenter   = { x: 0, y: 0 };
+
+  const particles = Array.from({ length: COUNT }, (_, i) => {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 0.2 + Math.random() * 0.4;
+    return {
+      x:      Math.random() * W,
+      y:      Math.random() * H,
+      vx:     Math.cos(angle) * speed,
+      vy:     Math.sin(angle) * speed,
+      driftX: Math.cos(angle) * speed,
+      driftY: Math.sin(angle) * speed,
+      r:      Math.random() * 2.2 + 0.4,
+      hue:    180 + Math.random() * 40,
+      alpha:  Math.random() * 0.3 + 0.1,
+      targetAlpha: 0,
+      targetIndex: i
+    };
+  });
+
+  // ── GERADORES DE FORMAS ──
+  function symbolTargets(cx, cy) {
+    const s = 65, pts = [], d = 15;
+    // <
+    for(let i=0; i<=d; i++) {
+        pts.push({ x: cx - s*1 - (s*1.3 * i/d), y: cy - s + (s * i/d) });
+        pts.push({ x: cx - s*2.3 + (s*1.3 * i/d), y: cy + (s * i/d) });      
+    }
+    // /
+    for(let i=0; i<=d*2; i++) {
+        pts.push({ x: cx + s*0.5 - (s * i/(d*2)), y: cy - s*1.3 + (s*2.5 * i/(d*2)) });
+    }
+    // >
+    for(let i=0; i<=d; i++) {
+        pts.push({ x: cx + s*1 + (s*1.3 * i/d), y: cy - s + (s * i/d) });
+        pts.push({ x: cx + s*2.3 - (s*1.3 * i/d), y: cy + (s * i/d) });
+    }
+    return pts;
+  }
+
+  function generateBracketPoints(rect) {
+    const pts = [], size = 32, m = 28;
+    const r = { l: rect.left - m, r: rect.right + m, t: rect.top - m, b: rect.bottom + m };
+    for (let i = 0; i < size; i += 3) {
+        pts.push({ x: r.l + i, y: r.t }, { x: r.l, y: r.t + i });
+        pts.push({ x: r.r - i, y: r.t }, { x: r.r, y: r.t + i });
+        pts.push({ x: r.l + i, y: r.b }, { x: r.l, y: r.b - i });
+        pts.push({ x: r.r - i, y: r.b }, { x: r.r, y: r.b - i });
+    }
+    return pts;
+  }
+
+  function generateCurlyBracePoints(rect) {
+    const pts = [], m = 40;
+    const l = rect.left - m, r = rect.right + m;
+    const t = rect.top, b = rect.bottom, h = b - t, cy = (t + b) / 2;
+    
+    // { Left
+    for(let i=0; i<12; i++) {
+        pts.push({ x: l + 12 - i, y: t + i }); // Top Hook
+        pts.push({ x: l, y: t + 12 + i*(h/2 - 24)/12 }); // Upper Stem
+        pts.push({ x: l - 10 + i, y: cy - 10 + i }); // Bump joint top
+        pts.push({ x: l - i, y: cy + i }); // Bump joint bottom
+        pts.push({ x: l, y: b - 12 - i*(h/2 - 24)/12 }); // Lower Stem
+        pts.push({ x: l + 12 - i, y: b - i }); // Bottom Hook
+    }
+    // } Right
+    for(let i=0; i<12; i++) {
+        pts.push({ x: r - 12 + i, y: t + i }); // Top Hook
+        pts.push({ x: r, y: t + 12 + i*(h/2 - 24)/12 }); // Upper Stem
+        pts.push({ x: r + 10 - i, y: cy - 10 + i }); // Bump joint top
+        pts.push({ x: r + i, y: cy + i }); // Bump joint bottom
+        pts.push({ x: r, y: b - 12 - i*(h/2 - 24)/12 }); // Lower Stem
+        pts.push({ x: r - 12 + i, y: b - i }); // Bottom Hook
+    }
+    return pts;
+  }
+
+  function assignClosestParticles(center, targets) {
+    for (const p of particles) p.activeTarget = null;
+    const sorted = [...particles].sort((a,b) => {
+      const d1 = (a.x - center.x)**2 + (a.y - center.y)**2;
+      const d2 = (b.x - center.x)**2 + (b.y - center.y)**2;
+      return d1 - d2;
+    });
+    const count = targets.length;
+    for(let i=0; i<count; i++) {
+        sorted[i].activeTarget = targets[i];
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    if (hoveredElement && activeTargets) {
+      const rect = hoveredElement.getBoundingClientRect();
+      const newPts = hoveredElement.id === 'header-name' 
+        ? generateCurlyBracePoints(rect) 
+        : generateBracketPoints(rect);
+      if (newPts.length === activeTargets.length) {
+        for(let i=0; i<activeTargets.length; i++) {
+          activeTargets[i].x = newPts[i].x;
+          activeTargets[i].y = newPts[i].y;
+        }
+        activeCenter.x = rect.left + rect.width/2;
+        activeCenter.y = rect.top + rect.height/2;
+      }
+    }
+  });
+
+  window.addEventListener('mousedown', e => { 
+    click = { x: e.clientX, y: e.clientY }; 
+    const targets = symbolTargets(click.x, click.y);
+    activeCenter = click;
+    activeTargets = targets;
+    assignClosestParticles(click, targets);
+  });
+  window.addEventListener('mouseup', () => { 
+    click = null; 
+    activeTargets = null;
+    hoveredElement = null;
+    for (const p of particles) p.activeTarget = null;
+  });
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      hoveredElement = card;
+      const rect = card.getBoundingClientRect();
+      const targets = generateBracketPoints(rect);
+      activeCenter = { x: rect.left + rect.width/2, y: rect.top + rect.height/2 };
+      activeTargets = targets;
+      assignClosestParticles(activeCenter, targets);
+    });
+    card.addEventListener('mouseleave', () => {
+      if (click) {
+        hoveredElement = null;
+        const targets = symbolTargets(click.x, click.y);
+        activeCenter = click;
+        activeTargets = targets;
+        assignClosestParticles(click, targets);
+      } else {
+        hoveredElement = null;
+        activeTargets = null;
+        for (const p of particles) p.activeTarget = null;
+      }
+    });
+  });
+
+  const headerName = document.getElementById('header-name');
+  if (headerName) {
+    headerName.addEventListener('mouseenter', () => {
+      hoveredElement = headerName;
+      const rect = headerName.getBoundingClientRect();
+      const targets = generateCurlyBracePoints(rect);
+      activeCenter = { x: rect.left + rect.width/2, y: rect.top + rect.height/2 };
+      activeTargets = targets;
+      assignClosestParticles(activeCenter, targets);
+    });
+    headerName.addEventListener('mouseleave', () => {
+      if (click) {
+        hoveredElement = null;
+        const targets = symbolTargets(click.x, click.y);
+        activeCenter = click;
+        activeTargets = targets;
+        assignClosestParticles(click, targets);
+      } else {
+        hoveredElement = null;
+        activeTargets = null;
+        for (const p of particles) p.activeTarget = null;
+      }
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Glows
+    const mg = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 180);
+    mg.addColorStop(0, 'rgba(0,229,255,0.03)');
+    mg.addColorStop(1, 'transparent');
+    ctx.fillStyle = mg;
+    ctx.fillRect(0, 0, W, H);
+
+    if (activeCenter && activeTargets) {
+      const cg = ctx.createRadialGradient(activeCenter.x, activeCenter.y, 0, activeCenter.x, activeCenter.y, 350);
+      cg.addColorStop(0, 'rgba(0,229,255,0.06)');
+      cg.addColorStop(1, 'transparent');
+      ctx.fillStyle = cg;
+      ctx.fillRect(0, 0, W, H);
+    }
+
+    for (const p of particles) {
+      // Repulsão (afeta a todos)
+      const mdx = p.x - mouse.x; const mdy = p.y - mouse.y;
+      const md  = Math.sqrt(mdx * mdx + mdy * mdy);
+      const isNearActive = activeTargets && Math.sqrt((p.x - activeCenter.x)**2 + (p.y - activeCenter.y)**2) < 600;
+
+      if (!isNearActive && md < REPEL_RADIUS && md > 0) {
+        const str = (1 - md / REPEL_RADIUS) * REPEL_FORCE;
+        p.vx += (mdx / md) * str; p.vy += (mdy / md) * str;
+      }
+
+      // MOVIMENTAÇÃO (Interpolação para estabilidade se tiver alvo)
+      let isTargeted = false;
+      if (p.activeTarget) {
+        p.x += (p.activeTarget.x - p.x) * 0.12;
+        p.y += (p.activeTarget.y - p.y) * 0.12;
+        
+        const dx = p.activeTarget.x - p.x, dy = p.activeTarget.y - p.y;
+        if (Math.sqrt(dx*dx + dy*dy) < 5) {
+          isTargeted = true;
+          p.targetAlpha = Math.min(0.95, p.targetAlpha + 0.2);
+        }
+        p.vx = 0; p.vy = 0; // Travar física enquanto tiver alvo
+      } else {
+        p.vx *= FRICTION; p.vy *= FRICTION;
+        p.vx += (p.driftX - p.vx) * DRIFT_PULL;
+        p.vy += (p.driftY - p.vy) * DRIFT_PULL;
+        p.x += p.vx; p.y += p.vy;
+      }
+
+      if (!isTargeted) p.targetAlpha = Math.max(0, p.targetAlpha - 0.06);
+
+      // Física
+      p.vx *= FRICTION; p.vy *= FRICTION;
+      p.vx += (p.driftX - p.vx) * DRIFT_PULL;
+      p.vy += (p.driftY - p.vy) * DRIFT_PULL;
+      p.x += p.vx; p.y += p.vy;
+
+      // Wrap
+      if (p.x < -120) p.x = W + 120; if (p.x > W+120) p.x = -120;
+      if (p.y < -120) p.y = H + 120; if (p.y > H+120) p.y = -120;
+
+      // Draw
+      const alpha = Math.max(p.alpha, p.targetAlpha);
+      const hue   = isTargeted ? 192 : p.hue;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, isTargeted ? p.r * 1.3 : p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${hue}, ${isTargeted ? 100 : 90}%, ${isTargeted ? 75 : 65}%, ${alpha})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+})();
+</script>
+</body>
+</html>

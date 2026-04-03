@@ -1,55 +1,37 @@
 # Leonardo da Cruz
+### Software 3.0 Orchestrator | Agentic Systems | Creative Engineering
 
+> [!TIP]
+> This is a special repository. The interactive, particle-powered version of my profile is hosted here!
+
+---
+
+## ⚡ Interactive Profile
+I've built a custom, high-performance interactive profile using **HTML5 Canvas** and **Advanced Particle Physics**. 
+
+### [👉 Click here to experience the interactive version](https://leosdc.github.io/Leosdc/)
+
+---
+
+## 🛠️ Specialized In
+- **Agentic AI**: Developing autonomous bots and multi-agent systems.
+- **Workflow Automation**: Expert in **n8n**, Google Apps Script, and cloud integrations.
+- **Fullstack Creative**: Crafting unique UI/UX experiences with **Vite**, **TypeScript**, and **Canvas API**.
+- **Cloud Infrastructure**: AWS, Cloudflare, Firebase, and Firestore.
+
+---
+
+## 🚀 Key Projects
+- **[OS Exploit](https://leosdc.github.io/OS-Exploit/)**: A minimalist, high-performance CLI reference tool.
+- **[Lyra the Wise](https://lyrathewise.lat)**: An AI-driven tabletop RPG engine.
+- **[The Vibe Gazette](https://thevibegazette.lat)**: A publication dedicated to vibe coding and software 3.0.
+
+---
+
+## 📫 Connect with Me
+[LinkedIn](https://linkedin.com/in/leonardo-da-cruz) | [GitHub](https://github.com/Leosdc) | [Discord](https://discord.gg/SdWnWJ6w)
+
+---
 <p align="center">
-  <img src="https://github.com/Leosdc/lyra-the-wise-webapp/blob/main/public/assets/extra/library.gif" width="600" alt="Lyra Library">
+  <i>"Software 3.0 isn't just written, it's orchestrated."</i>
 </p>
-
-> +10 anos em TI · Automações, IA e experimentos criativos
-
-Marido da Ana Alice · Pai da [Paçoca](https://www.instagram.com/pacoca_pc/) 🐶
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/leonardo-da-cruz)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/Leosdc)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/SdWnWJ6w)
-[![Ko-fi](https://img.shields.io/badge/Ko%E2%80%91fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/leosdc)
-
----
-
-## 🧩 Projetos
-
-### 🤖 [Lyra the Wise](https://lyrathewise.lat)
-RPG de mesa com IA — narrativa, escolhas e imersão.
-LLM para interpretação de contexto · Sistema modular de histórias
-[→ Repositório](https://github.com/Leosdc/lyra-the-wise-webapp)
-
----
-
-### 📰 [The Vibe Gazette](https://thevibegazette.lat)
-Webapp de notícias com vibe própria.
-
----
-
-### 🌐 [Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)
-Organizador pessoal de livros, séries e filmes.
-
----
-
-### 🌐 [OS Exploit](https://leosdc.github.io/OS-Exploit/)
-Site para lembrar aquele comando básico que seu cérebro esqueceu.
-
----
-
-### 🕹️ [Neon Wars](https://leosdc.github.io/territory/)
-Jogo de conquista de território super mal feito com estética neon.
-
----
-
-### ⚖️ [Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/)
-Site para democratizar o acesso à justiça no Brasil.
-
----
-
-## 🛠️ O que faço
-
-`Bots e agentes com IA` · `Automações com n8n e Google Apps Script`  
-`Infraestrutura em AWS e Cloudflare` · `Geração de imagens com Stable Diffusion`
