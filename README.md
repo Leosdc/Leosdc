@@ -1,37 +1,37 @@
 # Leonardo da Cruz
-### Software 3.0 Orchestrator | Agentic Systems | Creative Engineering
+### Orquestrador de Software 3.0 | Sistemas Agênticos | Engenharia Criativa
 
 > [!TIP]
-> This is a special repository. The interactive, particle-powered version of my profile is hosted here!
+> Este é um repositório especial. A versão interativa do meu perfil, movida a partículas, está hospedada aqui!
 
 ---
 
-## ⚡ Interactive Profile
-I've built a custom, high-performance interactive profile using **HTML5 Canvas** and **Advanced Particle Physics**. 
+## ⚡ Perfil Interativo
+Eu construí um perfil interativo personalizado de alta performance usando **HTML5 Canvas** e **Física Avançada de Partículas**. 
 
-### [👉 Click here to experience the interactive version](https://leosdc.github.io/Leosdc/)
-
----
-
-## 🛠️ Specialized In
-- **Agentic AI**: Developing autonomous bots and multi-agent systems.
-- **Workflow Automation**: Expert in **n8n**, Google Apps Script, and cloud integrations.
-- **Fullstack Creative**: Crafting unique UI/UX experiences with **Vite**, **TypeScript**, and **Canvas API**.
-- **Cloud Infrastructure**: AWS, Cloudflare, Firebase, and Firestore.
+### [👉 Clique aqui para experimentar a versão interativa](https://leosdc.github.io/Leosdc/)
 
 ---
 
-## 🚀 Key Projects
-- **[OS Exploit](https://leosdc.github.io/OS-Exploit/)**: A minimalist, high-performance CLI reference tool.
-- **[Lyra the Wise](https://lyrathewise.lat)**: An AI-driven tabletop RPG engine.
-- **[The Vibe Gazette](https://thevibegazette.lat)**: A publication dedicated to vibe coding and software 3.0.
+## 🛠️ Especializado Em
+- **IA Agêntica**: Desenvolvimento de bots autônomos e sistemas multi-agentes.
+- **Automação de Workflow**: Especialista em **n8n**, Google Apps Script e integrações em nuvem.
+- **Fullstack Criativo**: Criando experiências de UI/UX únicas com **Vite**, **TypeScript** e **Canvas API**.
+- **Infraestrutura em Nuvem**: AWS, Cloudflare, Firebase e Firestore.
 
 ---
 
-## 📫 Connect with Me
+## 🚀 Principais Projetos
+- **[Lyra the Wise](https://lyrathewise.lat)**: Um motor de RPG de mesa movido a IA.
+- **[The Vibe Gazette](https://thevibegazette.lat)**: Uma publicação dedicada ao vibe coding e software 3.0.
+- **[OS Exploit](https://leosdc.github.io/OS-Exploit/)**: Uma ferramenta de referência CLI minimalista e de alta performance.
+- **[Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/)**: Democratizando o acesso à justiça no Brasil via IA.
+- **[O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)**: Organizador pessoal de livros, séries e filmes.
+
+---
+
+## 📫 Conecte-se Comigo
 [LinkedIn](https://linkedin.com/in/leonardo-da-cruz) | [GitHub](https://github.com/Leosdc) | [Discord](https://discord.gg/SdWnWJ6w)
 
 ---
-<p align="center">
-  <i>"Software 3.0 isn't just written, it's orchestrated."</i>
-</p>
+
