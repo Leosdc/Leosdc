@@ -24,9 +24,11 @@ Eu construí um perfil interativo personalizado de alta performance usando **HTM
 ## 🚀 Principais Projetos
 - **[Lyra the Wise](https://lyrathewise.lat)**: Um motor de RPG de mesa movido a IA.
 - **[The Vibe Gazette](https://thevibegazette.lat)**: Uma publicação dedicada ao vibe coding e software 3.0.
+- **[Void Despair](https://leosdc.github.io/void-despair/)**: Jogo arcade de sobrevivência frenético no universo de Lyra the Wise.
 - **[OS Exploit](https://leosdc.github.io/OS-Exploit/)**: Uma ferramenta de referência CLI minimalista e de alta performance.
 - **[Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/)**: Democratizando o acesso à justiça no Brasil via IA.
 - **[O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)**: Organizador pessoal de livros, séries e filmes.
+- **[Neon Wars](https://leosdc.github.io/territory/)**: Jogo de conquista de território com estética neon.
 
 ---
 
