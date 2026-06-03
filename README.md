@@ -1,39 +1,31 @@
 # Leonardo da Cruz
-### Orquestrador de Software 3.0 | Sistemas Agênticos | Engenharia Criativa
 
-> [!TIP]
-> Este é um repositório especial. A versão interativa do meu perfil, movida a partículas, está hospedada aqui!
+Desenvolvedor com 10+ anos em TI, baseado em Joinville (SC). Trabalho principalmente com sistemas agênticos, automação e experimentos criativos com Canvas e partículas. Tenho um [perfil interativo](https://leosdc.github.io/Leosdc/) que faz mais sentido ver do que descrever.
 
 ---
 
-## ⚡ Perfil Interativo
-Eu construí um perfil interativo personalizado de alta performance usando **HTML5 Canvas** e **Física Avançada de Partículas**. 
+Atualmente focado em arquiteturas multi-agente, orquestração com Gemini e na interseção entre engenharia de software e cultura *vibe coding* — sobre isso escrevo no [The Vibe Gazette](https://thevibegazette.lat).
 
-### [👉 Clique aqui para experimentar a versão interativa](https://leosdc.github.io/Leosdc/)
-
----
-
-## 🛠️ Especializado Em
-- **IA Agêntica**: Desenvolvimento de bots autônomos e sistemas multi-agentes.
-- **Automação de Workflow**: Especialista em **n8n**, Google Apps Script e integrações em nuvem.
-- **Fullstack Criativo**: Criando experiências de UI/UX únicas com **Vite**, **TypeScript** e **Canvas API**.
-- **Infraestrutura em Nuvem**: AWS, Cloudflare, Firebase e Firestore.
+**Áreas em que atuo:**
+- Agentes autônomos e orquestração multi-agente
+- Automação com n8n, Google Apps Script e integrações em nuvem
+- Infraestrutura: AWS, Cloudflare, Firebase, Firestore
+- Frontend criativo com Canvas API, TypeScript e Vite
 
 ---
 
-## 🚀 Principais Projetos
-- **[Lyra the Wise](https://lyrathewise.lat)**: Um motor de RPG de mesa movido a IA.
-- **[The Vibe Gazette](https://thevibegazette.lat)**: Uma publicação dedicada ao vibe coding e software 3.0.
-- **[Void Despair](https://leosdc.github.io/void-despair/)**: Jogo arcade de sobrevivência frenético no universo de Lyra the Wise.
-- **[OS Exploit](https://leosdc.github.io/OS-Exploit/)**: Uma ferramenta de referência CLI minimalista e de alta performance.
-- **[Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/)**: Democratizando o acesso à justiça no Brasil via IA.
-- **[O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/)**: Organizador pessoal de livros, séries e filmes.
-- **[Neon Wars](https://leosdc.github.io/territory/)**: Jogo de conquista de território com estética neon.
+**Projetos**
+
+| Projeto | Descrição |
+|---|---|
+| [Lyra the Wise](https://lyrathewise.lat) | Motor de RPG de mesa com IA |
+| [The Vibe Gazette](https://thevibegazette.lat) | Publicação sobre vibe coding e software 3.0 |
+| [Void Despair](https://leosdc.github.io/void-despair/) | Arcade de sobrevivência no universo de Lyra |
+| [OS Exploit](https://leosdc.github.io/OS-Exploit/) | Referência CLI minimalista e de alta performance |
+| [Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/) | Acesso à justiça via IA para cidadãos brasileiros |
+| [O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/) | Organizador pessoal de livros, séries e filmes |
+| [Neon Wars](https://leosdc.github.io/territory/) | Jogo de conquista de território com estética neon |
 
 ---
 
-## 📫 Conecte-se Comigo
-[LinkedIn](https://linkedin.com/in/leonardo-da-cruz) | [GitHub](https://github.com/Leosdc) | [Discord](https://discord.gg/SdWnWJ6w)
-
----
-
+[LinkedIn](https://linkedin.com/in/leonardo-da-cruz) · [GitHub](https://github.com/Leosdc) · [Discord](https://discord.gg/SdWnWJ6w)
