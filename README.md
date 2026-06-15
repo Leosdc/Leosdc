@@ -4,7 +4,7 @@ Especialista com 10+ anos em TI. Trabalho principalmente com sistemas agênticos
 
 ---
 
-Atualmente focado em arquiteturas multi-agente, orquestração com Gemini e na interseção entre engenharia de software e cultura *vibe coding* — sobre isso escrevo no [The Vibe Gazette](https://thevibegazette.lat).
+Atualmente focado em arquiteturas multi-agente, orquestração com Gemini e na interseção entre engenharia de software e Software 3.0 — sobre isso escrevo no [The Vibe Gazette](https://thevibegazette.lat).
 
 **Áreas em que atuo:**
 - Agentes autônomos e orquestração multi-agente
