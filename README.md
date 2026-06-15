@@ -1,32 +1,31 @@
 # Leonardo da Cruz
-
-Especialista com 10+ anos em TI. Trabalho principalmente com sistemas agênticos, automação e experimentos criativos com Canvas e partículas. Tenho um [perfil interativo](https://leosdc.github.io/Leosdc/) que faz mais sentido ver do que descrever. Além disso, atuo diretamente com Infraestrutura, Segurança da Informação, Ciência de Dados e Gestão de Projetos.
-
----
-
-Atualmente focado em arquiteturas multi-agente, orquestração com Gemini e na interseção entre engenharia de software 3.0 e *Vibe Coding* (com segurança e noção técnica) — sobre isso escrevo no [The Vibe Gazette](https://thevibegazette.lat).
-
-**Áreas em que atuo:**
-- Agentes autônomos e orquestração multi-agente
-- Automação com n8n, Google Apps Script e integrações em nuvem
-- Infraestrutura: AWS, Cloudflare, Firebase, Firestore
-- Frontend criativo com Canvas API, TypeScript e Vite
+10+ years in IT. I work mainly with agentic systems, automation, and creative experiments with Canvas and particles. I have an [interactive profile](https://leosdc.github.io/Leosdc/) that makes more sense to see than to describe. I also work directly with Infrastructure, Information Security, Data Science, and Project Management.
 
 ---
 
-**Projetos**
+Currently focused on multi-agent architectures, orchestration with Gemini, and the intersection between Software 3.0 engineering and *Vibe Coding* (with security awareness and technical grounding) — which I write about at [The Vibe Gazette](https://thevibegazette.lat).
 
-| Projeto | Descrição |
+**Areas I work in:**
+- Autonomous agents and multi-agent orchestration
+- Automation with n8n, Google Apps Script, and cloud integrations
+- Infrastructure: AWS, Cloudflare, Firebase, Firestore
+- Creative frontend with Canvas API, TypeScript, and Vite
+
+---
+
+**Projects**
+
+| Project | Description |
 |---|---|
-| [Lyra the Wise](https://lyrathewise.lat) | Motor de RPG de mesa com IA |
-| [Understand Anything Desktop](https://github.com/Leosdc/understand-anything-desktop/) | Versão desktop do undertand-anything, para geração de grafos dos seus repositórios |
+| [Lyra the Wise](https://lyrathewise.lat) | AI-powered tabletop RPG engine |
+| [Understand Anything Desktop](https://github.com/Leosdc/understand-anything-desktop/) | Desktop version of understand-anything, for generating graphs of your repositories |
 | [Skill Tree](https://github.com/Leosdc/skilltree/) | The universal, community-driven skill tree repository for AI Agents |
-| [The Vibe Gazette](https://thevibegazette.lat) | Publicação sobre vibe coding e software 3.0 |
-| [Void Despair](https://leosdc.github.io/void-despair/) | Arcade de sobrevivência no universo de Lyra |
-| [OS Exploit](https://leosdc.github.io/OS-Exploit/) | Referência CLI minimalista e de alta performance |
-| [Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/) | Acesso à justiça via IA para cidadãos brasileiros |
-| [O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/) | Organizador pessoal de livros, séries e filmes |
-| [Neon Wars](https://leosdc.github.io/territory/) | Jogo de conquista de território com estética neon |
+| [The Vibe Gazette](https://thevibegazette.lat) | Publication on vibe coding and software 3.0 |
+| [Void Despair](https://leosdc.github.io/void-despair/) | Survival arcade set in the Lyra universe |
+| [OS Exploit](https://leosdc.github.io/OS-Exploit/) | Minimalist, high-performance CLI reference |
+| [Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/) | AI-powered legal access tool for Brazilian citizens |
+| [O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/) | Personal organizer for books, series, and films |
+| [Neon Wars](https://leosdc.github.io/territory/) | Neon-aesthetic territory conquest game |
 
 ---
 
