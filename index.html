@@ -58,7 +58,7 @@ body::after {
 .page {
   position: relative;
   z-index: 2;
-  max-width: 780px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 56px 24px 80px;
 }
@@ -145,27 +145,84 @@ body::after {
   margin: 44px 0;
 }
 
-/* ── BENTO GRID ── */
-.bento {
+/* ── PROJECTS COLUMN SYSTEM ── */
+.projects-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 10px;
+  gap: 36px;
   animation: fadeUp .7s .2s ease both;
 }
 
-/* section label */
+.project-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column-header {
+  margin-bottom: 4px;
+}
+
 .section-label {
-  grid-column: 1 / -1;
   font-size: 10px;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 2px;
   padding-left: 2px;
 }
 
-/* glass card */
+/* Mascot floating styling (clean & borderless) */
+.mascot-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 4px;
+}
+
+.mascot-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.12) 0%, transparent 70%);
+  filter: blur(15px);
+  animation: glowPulse 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-mascot {
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.25));
+  animation: floatMascot 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes floatMascot {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+    filter: drop-shadow(0 12px 25px rgba(0, 229, 255, 0.45));
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.25); opacity: 0.8; }
+}
+
+/* Cards lists vertical gap */
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Glass card */
 .card {
   background: var(--glass);
   border: 1px solid var(--border);
@@ -198,9 +255,8 @@ body::after {
 
 .card:hover::before { opacity: 1; }
 
-/* featured card spans 2 cols */
+/* Highlighted card styling */
 .card.featured {
-  grid-column: 1 / -1;
   background: rgba(0,229,255,.04);
   border-color: rgba(0,229,255,.18);
 }
@@ -210,11 +266,21 @@ body::after {
   opacity: 1;
 }
 
-.card-icon {
-  font-size: 22px;
+/* Custom SVG icons style instead of emojis */
+.card-icon-svg {
+  width: 24px;
+  height: 24px;
   margin-bottom: 14px;
   display: block;
-  line-height: 1;
+  color: var(--cyan);
+  filter: drop-shadow(0 0 3px rgba(0, 229, 255, 0.4));
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .card-icon-svg {
+  transform: scale(1.15) rotate(2deg);
+  color: var(--orange);
+  filter: drop-shadow(0 0 6px rgba(255, 112, 67, 0.6));
 }
 
 .card-name {
@@ -307,9 +373,8 @@ body::after {
   to   { opacity:1; transform:translateY(0); }
 }
 
-@media (max-width: 520px) {
-  .bento { grid-template-columns: 1fr; }
-  .card.featured { grid-column: 1; }
+@media (max-width: 768px) {
+  .projects-container { grid-template-columns: 1fr; gap: 40px; }
 }
 </style>
 </head>
@@ -350,69 +415,162 @@ body::after {
 
   <hr class="rule">
 
-  <!-- BENTO GRID -->
-  <div class="bento">
-    <div class="section-label">// projetos</div>
+  <!-- 2 COLUMNS PROJECTS CONTAINER -->
+  <div class="projects-container">
+    
+    <!-- COLUNA LEONARDO DA CRUZ -->
+    <div class="project-column">
+      <div class="column-header">
+        <div class="section-label">// Leonardo da Cruz</div>
+      </div>
+      
+      <div class="cards-list">
+        <!-- Lyra the Wise -->
+        <a class="card featured" href="https://lyrathewise.lat" target="_blank">
+          <span class="card-badge">destaque</span>
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 0 1 7.54 16.59A2 2 0 0 1 18 20H6a2 2 0 0 1-1.54-1.41A10 10 0 0 1 12 2z"/>
+            <path d="M12 6v4M8 10h8M9 14h6"/>
+            <circle cx="9" cy="8" r="1" fill="currentColor"/>
+            <circle cx="15" cy="8" r="1" fill="currentColor"/>
+          </svg>
+          <div class="card-name">Lyra the Wise</div>
+          <div class="card-desc">RPG de mesa com IA — narrativa, escolhas e imersão total. LLM para interpretação de contexto, sistema modular de histórias.</div>
+          <span class="card-arrow">↗</span>
+        </a>
 
-    <!-- FEATURED -->
-    <a class="card featured" href="https://lyrathewise.lat" target="_blank">
-      <span class="card-badge">destaque</span>
-      <span class="card-icon">🤖</span>
-      <div class="card-name">Lyra the Wise</div>
-      <div class="card-desc">RPG de mesa com IA — narrativa, escolhas e imersão total. LLM para interpretação de contexto, sistema modular de histórias.</div>
-      <span class="card-arrow">↗</span>
-    </a>
+        <!-- The Vibe Gazette -->
+        <a class="card" href="https://thevibegazette.lat" target="_blank">
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M16 8h-4M16 12H8M16 16H8M8 8H9"/>
+          </svg>
+          <div class="card-name">The Vibe Gazette</div>
+          <div class="card-desc">Publicação sobre vibe coding e engenharia agêntica. Software 3.0 na prática.</div>
+          <span class="card-arrow">↗</span>
+        </a>
 
-    <!-- UNDERSTAND ANYTHING DESKTOP -->
-    <a class="card featured" href="https://github.com/Leosdc/understand-anything-desktop" target="_blank">
-      <span class="card-badge">desktop</span>
-      <span class="card-icon">🕸️</span>
-      <div class="card-name">Understand Anything Desktop</div>
-      <div class="card-desc">Transforme qualquer base de código em um grafo de conhecimento interativo. Aplicativo desktop portátil para Windows (zero config) com estimativa de custo de tokens Gemini/Claude e carregamento rápido de históricos.</div>
-      <span class="card-arrow">↗</span>
-    </a>
+        <!-- Void Despair -->
+        <a class="card" href="https://leosdc.github.io/void-despair/" target="_blank">
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" stroke-dasharray="4 4"/>
+            <path d="M12 6a6 6 0 1 1-6 6"/>
+            <path d="M12 9a3 3 0 1 1-3 3"/>
+            <circle cx="12" cy="12" r="1" fill="currentColor"/>
+          </svg>
+          <div class="card-name">Void Despair</div>
+          <div class="card-desc">Jogo arcade de sobrevivência frenético no universo de Lyra the Wise. Desvie de projéteis cósmicos em uma sinfonia de partículas e neon.</div>
+          <span class="card-arrow">↗</span>
+        </a>
 
-    <a class="card" href="https://thevibegazette.lat" target="_blank">
-      <span class="card-icon">📰</span>
-      <div class="card-name">The Vibe Gazette</div>
-      <div class="card-desc">Publicação sobre vibe coding e engenharia agêntica. Software 3.0 na prática.</div>
-      <span class="card-arrow">↗</span>
-    </a>
+        <!-- OS Exploit -->
+        <a class="card" href="https://leosdc.github.io/OS-Exploit/" target="_blank">
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M6 8l4 4-4 4"/>
+            <line x1="12" y1="16" x2="18" y2="16"/>
+          </svg>
+          <div class="card-name">OS Exploit</div>
+          <div class="card-desc">Aquele comando básico que seu cérebro esqueceu. 600+ atalhos, bilíngue, com partículas.</div>
+          <span class="card-arrow">↗</span>
+        </a>
 
-    <a class="card" href="https://leosdc.github.io/void-despair/" target="_blank">
-      <span class="card-icon">🌌</span>
-      <div class="card-name">Void Despair</div>
-      <div class="card-desc">Jogo arcade de sobrevivência frenético no universo de Lyra the Wise. Desvie de projéteis cósmicos em uma sinfonia de partículas e neon.</div>
-      <span class="card-arrow">↗</span>
-    </a>
+        <!-- Mundo da Alice -->
+        <a class="card" href="https://leosdc.github.io/mundo-da-alice/" target="_blank">
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h10v18H2z"/>
+            <path d="M22 3H12v18h10z"/>
+            <path d="M6 6h2M6 10h2M16 6h2M16 10h2"/>
+          </svg>
+          <div class="card-name">Mundo da Alice</div>
+          <div class="card-desc">Organizador pessoal de livros, séries e filmes.</div>
+          <span class="card-arrow">↗</span>
+        </a>
 
-    <a class="card" href="https://leosdc.github.io/OS-Exploit/" target="_blank">
-      <span class="card-icon">💻</span>
-      <div class="card-name">OS Exploit</div>
-      <div class="card-desc">Aquele comando básico que seu cérebro esqueceu. 600+ atalhos, bilíngue, com partículas.</div>
-      <span class="card-arrow">↗</span>
-    </a>
+        <!-- Neon Wars -->
+        <a class="card" href="https://leosdc.github.io/territory/" target="_blank">
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="12" rx="2"/>
+            <circle cx="6" cy="12" r="2"/>
+            <circle cx="14" cy="10" r="1" fill="currentColor"/>
+            <circle cx="18" cy="10" r="1" fill="currentColor"/>
+            <circle cx="14" cy="14" r="1" fill="currentColor"/>
+            <circle cx="18" cy="14" r="1" fill="currentColor"/>
+          </svg>
+          <div class="card-name">Neon Wars</div>
+          <div class="card-desc">Jogo de conquista de território com estética neon. Super mal feito e divertido.</div>
+          <span class="card-arrow">↗</span>
+        </a>
 
-    <a class="card" href="https://leosdc.github.io/mundo-da-alice/" target="_blank">
-      <span class="card-icon">🌐</span>
-      <div class="card-name">Mundo da Alice</div>
-      <div class="card-desc">Organizador pessoal de livros, séries e filmes.</div>
-      <span class="card-arrow">↗</span>
-    </a>
+        <!-- Guia do Cidadão -->
+        <a class="card" href="https://leosdc.github.io/Guia-do-Cidadao/" target="_blank">
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="2" x2="12" y2="22"/>
+            <line x1="5" y1="7" x2="19" y2="7"/>
+            <path d="M5 7l2 8h6l2-8"/>
+            <path d="M19 7l-2 8h-6l-2-8"/>
+            <line x1="10" y1="22" x2="14" y2="22"/>
+          </svg>
+          <div class="card-name">Guia do Cidadão</div>
+          <div class="card-desc">Democratizando o acesso à justiça no Brasil via IA.</div>
+          <span class="card-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- COLUNA NEON CAT -->
+    <div class="project-column">
+      <div class="column-header">
+        <div class="section-label">// Neon Cat</div>
+      </div>
+      
+      <!-- Floating Mascot -->
+      <div class="mascot-container">
+        <div class="mascot-glow"></div>
+        <img src="mascote.png" alt="Neon Cat Mascot" class="floating-mascot">
+      </div>
+      
+      <div class="cards-list">
+        <!-- Understand Anything Desktop -->
+        <a class="card featured" href="https://github.com/Leosdc/understand-anything-desktop" target="_blank">
+          <span class="card-badge">desktop</span>
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <circle cx="6" cy="6" r="2.5"/>
+            <circle cx="18" cy="6" r="2.5"/>
+            <circle cx="18" cy="18" r="2.5"/>
+            <circle cx="6" cy="18" r="2.5"/>
+            <line x1="12" y1="12" x2="6.5" y2="6.5"/>
+            <line x1="12" y1="12" x2="17.5" y2="6.5"/>
+            <line x1="12" y1="12" x2="17.5" y2="17.5"/>
+            <line x1="12" y1="12" x2="6.5" y2="17.5"/>
+          </svg>
+          <div class="card-name">Understand Anything Desktop</div>
+          <div class="card-desc">Transforme qualquer base de código em um grafo de conhecimento interativo. Aplicativo desktop portátil para Windows (zero config) com estimativa de custo de tokens Gemini/Claude e carregamento rápido de históricos.</div>
+          <span class="card-arrow">↗</span>
+        </a>
 
-    <a class="card" href="https://leosdc.github.io/territory/" target="_blank">
-      <span class="card-icon">🕹️</span>
-      <div class="card-name">Neon Wars</div>
-      <div class="card-desc">Jogo de conquista de território com estética neon. Super mal feito e divertido.</div>
-      <span class="card-arrow">↗</span>
-    </a>
-
-    <a class="card" href="https://leosdc.github.io/Guia-do-Cidadao/" target="_blank">
-      <span class="card-icon">⚖️</span>
-      <div class="card-name">Guia do Cidadão</div>
-      <div class="card-desc">Democratizando o acesso à justiça no Brasil via IA.</div>
-      <span class="card-arrow">↗</span>
-    </a>
+        <!-- Skill Tree -->
+        <a class="card featured" href="https://github.com/Leosdc/skilltree" target="_blank">
+          <span class="card-badge">framework</span>
+          <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L12 22"/>
+            <path d="M12 8L18 5"/>
+            <path d="M12 14L6 11"/>
+            <path d="M12 17L19 14"/>
+            <circle cx="12" cy="2" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="5" r="1.5" fill="currentColor"/>
+            <circle cx="6" cy="11" r="1.5" fill="currentColor"/>
+            <circle cx="19" cy="14" r="1.5" fill="currentColor"/>
+            <circle cx="12" cy="22" r="1.5" fill="currentColor"/>
+          </svg>
+          <div class="card-name">Skill Tree</div>
+          <div class="card-desc">Framework modular para versionar, compilar e sincronizar regras de IA (.cursorrules, .clauderules) em múltiplos editores com scan de dependências.</div>
+          <span class="card-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    
   </div>
 
   <!-- SKILLS -->
@@ -451,13 +609,13 @@ body::after {
   
   // ── PARAMS ──
   const IS_MOBILE      = window.innerWidth < 768;
-  const COUNT          = IS_MOBILE ? 800 : 3000;
+  const COUNT          = IS_MOBILE ? 1600 : 6000; // Quantidade de partículas duplicada
   const REPEL_RADIUS   = 80;
-  const REPEL_FORCE    = 1.2;
+  const REPEL_FORCE    = 2.4; // Força de repulsão aumentada
   const ATTRACT_RADIUS = 1200;
-  const ATTRACT_FORCE  = 1.5; // Mais forte para formar rápido
+  const ATTRACT_FORCE  = 3.0; // Força de atração aumentada
   const FRICTION       = 0.95;
-  const DRIFT_PULL     = 0.04;
+  const DRIFT_PULL     = 0.08; // Retorno ao drift mais rápido
 
   // ── ESTADO DE HOVER/CLICK ──
   let activeTargets = null;
@@ -467,7 +625,7 @@ body::after {
 
   const particles = Array.from({ length: COUNT }, (_, i) => {
     const angle = Math.random() * Math.PI * 2;
-    const speed = 0.2 + Math.random() * 0.4;
+    const speed = 0.5 + Math.random() * 1.0; // Velocidade de drift padrão aumentada
     return {
       x:      Math.random() * W,
       y:      Math.random() * H,
@@ -483,28 +641,102 @@ body::after {
     };
   });
 
-  // ── GERADORES DE FORMAS ──
-  function symbolTargets(cx, cy) {
-    const s = 65, pts = [], d = 15;
-    // <
-    for(let i=0; i<=d; i++) {
-        pts.push({ x: cx - s*1 - (s*1.3 * i/d), y: cy - s + (s * i/d) });
-        pts.push({ x: cx - s*2.3 + (s*1.3 * i/d), y: cy + (s * i/d) });      
+  // ── NEON CAT ASCII ART ──
+  const CAT_ASCII = `
+                                 ----=                                   =:::-                                
+                                ++**+----                            -----+**++                               
+                               =+#%*#*+=+=-=                       --++=**#*#*+                               
+                               ++#%**%**++++--   +=---------=*   --+++*###**%*+#                              
+                               =**++#*%%#*+**==++=++========+=+=-=**+*###+*++*++                              
+                               =*#****###**===-**=+++++++++++=*+-===**#******#+=                              
+                               =*#*#*#+++*+===-**+=+++++++++=**+-===**+*+%#**#+=                              
+                               =+##**#+*+*+===---***+****++**+---==++++*+*+*#*+=                              
+                               ++#+#*+*++++=====---***###***---=====*+++*+**+*=*                              
+                                =+##+***+=*+=++====---------====++=++++***+#*==                               
+                               ++#**#+##****=+++++++++++++++++++++=***###=*+**=                               
+                              +-++#*###*----::--:::::::::::::::------==*##*+*++-                              
+                              -+**+#+=+*##*++++++++===========+*****####*=+#***+=                             
+                             ---***-+#+====+========-----====++++****+++*#+=***---                            
+                            --=:---=*+++++-:---========-===+++++---:-******===-:--=                           
+                            =++==++=*++++-:=-**-======--=-==++=--=##:-+++**+++=-===                           
+                            ===*+**=+===-:-****+-=-----------=-=****=:-===++**+====                           
+                            =*+**##=+-==-:-++++--====-----====--++++-:-==-++###+=+-                           
+                             =+*##*=+----:::==-:------===------:-==-::----++**#++=                            
+                              ++*%##===----:::-----=--*+*--=-----:::----+++###*+=                             
+                     %%%        *###*+===========-:::::::::::-===========+*##*+        %%%%                   
+                   %#===#===    ++*##*=====----:::::-:::::--::::----=====+##+==    -==++--=%                  
+                   %#===#+**++=   +*###++==-------::::-:-::::-------===+*#*+=    =++****++*%                  
+                     %%%     +*+-   +**###*+======-----------======+**##*+=     +*+     %%@                   
+                               *==*   +***####**+++++++++++++++**###**++      #==*                            
+                               +=+#          #######%###########**             **+                            
+                        ====   ***=          -=+*##**##%%%%#%##+*+=            =*+   %#*%%                    
+                  %#*++*****+=  **++       -=++++**+===++***++===**=        == +*+  %*::+%                    
+                  %=.-*%    *=+  ***+++ =+===*####*++===-----===++*+==+----++++*+    =*#%%                    
+                  @%##%      +*#   ******+*###*+*#***+==-==-=-=+++###**+++*#*+++    ++*                       
+                              *+=------+*+=-=+  =##****+++***++*+*###**#****++    =+*+                        
+                            =-===-----==*+===+*+++**#%***+***++**= *###**      =+**+                          
+                           =++=+=++=+==+*++**++##********+*****++    ****####*****                            
+                           *#**+++*****#*##*###%=#%#+**#*+==*+*+=        ++                                   
+                           +*#*#**+==++=*#=:-+*%+**=+*+=**###++++ *=--==++===                                 
+                             ++%#==+#***++-=+**##+*+++#**+++*#***#**+==##*#+==                                
+                              **+=+*#+*##==+*##+===*########***++*##++=+* #*+==                               
+                               -=+##**+##-+***##*+*###****##*#*+*##**+==  *##+=                               
+                               =+*#* +++==+****##****** ##%##***#*#***+==  *#*+=                              
+                              ++##*     -+***   ##       ###*  #*   ***==   *#*++                             
+                              =#*#      +***              ##*       ***++     ##+                             
+                             =**       =+**                #*        **++      **=                            
+                             #         -**                            **+        *                            
+                                        *#                             #*`;
+
+  const catPoints = [];
+  (function initCatPoints() {
+    const lines = CAT_ASCII.split('\n');
+    let minC = Infinity, maxC = -Infinity;
+    let minR = Infinity, maxR = -Infinity;
+    
+    // Encontrar limites da arte para centralização
+    for (let r = 0; r < lines.length; r++) {
+      const line = lines[r];
+      for (let c = 0; c < line.length; c++) {
+        const char = line[c];
+        if (char && char !== ' ' && char !== '\r' && char !== '\n') {
+          if (c < minC) minC = c;
+          if (c > maxC) maxC = c;
+          if (r < minR) minR = r;
+          if (r > maxR) maxR = r;
+        }
+      }
     }
-    // /
-    for(let i=0; i<=d*2; i++) {
-        pts.push({ x: cx + s*0.5 - (s * i/(d*2)), y: cy - s*1.3 + (s*2.5 * i/(d*2)) });
+    
+    const centerC = minC + (maxC - minC) / 2;
+    const centerR = minR + (maxR - minR) / 2;
+    
+    const SCALE_X = 4.0;
+    const SCALE_Y = 7.5; // Compensação da proporção dos caracteres monospaçados
+    
+    for (let r = 0; r < lines.length; r++) {
+      const line = lines[r];
+      for (let c = 0; c < line.length; c++) {
+        const char = line[c];
+        if (char && char !== ' ' && char !== '\r' && char !== '\n') {
+          catPoints.push({
+            dx: (c - centerC) * SCALE_X,
+            dy: (r - centerR) * SCALE_Y
+          });
+        }
+      }
     }
-    // >
-    for(let i=0; i<=d; i++) {
-        pts.push({ x: cx + s*1 + (s*1.3 * i/d), y: cy - s + (s * i/d) });
-        pts.push({ x: cx + s*2.3 - (s*1.3 * i/d), y: cy + (s * i/d) });
-    }
-    return pts;
+  })();
+
+  function catTargets(cx, cy) {
+    return catPoints.map(p => ({
+      x: cx + p.dx,
+      y: cy + p.dy
+    }));
   }
 
   function generateBracketPoints(rect) {
-    const pts = [], size = 32, m = 28;
+    const pts = [], size = 24, m = 12; // Brackets mais justos para evitar sobreposição
     const r = { l: rect.left - m, r: rect.right + m, t: rect.top - m, b: rect.bottom + m };
     for (let i = 0; i < size; i += 3) {
         pts.push({ x: r.l + i, y: r.t }, { x: r.l, y: r.t + i });
@@ -548,9 +780,20 @@ body::after {
       const d2 = (b.x - center.x)**2 + (b.y - center.y)**2;
       return d1 - d2;
     });
-    const count = targets.length;
+
+    // Se o número de alvos for maior que o número de partículas, fazemos o downsampling uniforme
+    let finalTargets = targets;
+    if (targets.length > particles.length) {
+      finalTargets = [];
+      const step = targets.length / particles.length;
+      for (let i = 0; i < particles.length; i++) {
+        finalTargets.push(targets[Math.floor(i * step)]);
+      }
+    }
+
+    const count = finalTargets.length;
     for(let i=0; i<count; i++) {
-        sorted[i].activeTarget = targets[i];
+        sorted[i].activeTarget = finalTargets[i];
     }
   }
 
@@ -573,7 +816,7 @@ body::after {
 
   window.addEventListener('mousedown', e => { 
     click = { x: e.clientX, y: e.clientY }; 
-    const targets = symbolTargets(click.x, click.y);
+    const targets = catTargets(click.x, click.y);
     activeCenter = click;
     activeTargets = targets;
     assignClosestParticles(click, targets);
@@ -585,19 +828,20 @@ body::after {
     for (const p of particles) p.activeTarget = null;
   });
 
-  document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      hoveredElement = card;
-      const rect = card.getBoundingClientRect();
+  // Habilita as partículas para todos os .card e botões de redes sociais (.pill)
+  document.querySelectorAll('.card, .pill').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      hoveredElement = el;
+      const rect = el.getBoundingClientRect();
       const targets = generateBracketPoints(rect);
       activeCenter = { x: rect.left + rect.width/2, y: rect.top + rect.height/2 };
       activeTargets = targets;
       assignClosestParticles(activeCenter, targets);
     });
-    card.addEventListener('mouseleave', () => {
+    el.addEventListener('mouseleave', () => {
       if (click) {
         hoveredElement = null;
-        const targets = symbolTargets(click.x, click.y);
+        const targets = catTargets(click.x, click.y);
         activeCenter = click;
         activeTargets = targets;
         assignClosestParticles(click, targets);
@@ -622,7 +866,7 @@ body::after {
     headerName.addEventListener('mouseleave', () => {
       if (click) {
         hoveredElement = null;
-        const targets = symbolTargets(click.x, click.y);
+        const targets = catTargets(click.x, click.y);
         activeCenter = click;
         activeTargets = targets;
         assignClosestParticles(click, targets);
@@ -666,8 +910,8 @@ body::after {
       // MOVIMENTAÇÃO (Interpolação para estabilidade se tiver alvo)
       let isTargeted = false;
       if (p.activeTarget) {
-        p.x += (p.activeTarget.x - p.x) * 0.12;
-        p.y += (p.activeTarget.y - p.y) * 0.12;
+        p.x += (p.activeTarget.x - p.x) * 0.24; // Velocidade de transição para o alvo dobrada (de 0.12 para 0.24)
+        p.y += (p.activeTarget.y - p.y) * 0.24;
         
         const dx = p.activeTarget.x - p.x, dy = p.activeTarget.y - p.y;
         if (Math.sqrt(dx*dx + dy*dy) < 5) {
