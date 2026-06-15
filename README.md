@@ -20,6 +20,7 @@ Atualmente focado em arquiteturas multi-agente, orquestração com Gemini e na i
 |---|---|
 | [Lyra the Wise](https://lyrathewise.lat) | Motor de RPG de mesa com IA |
 | [Understand Anything Desktop](https://github.com/Leosdc/understand-anything-desktop/) | Versão desktop do undertand-anything, para geração de grafos dos seus repositórios |
+| [Skill Tree](https://github.com/Leosdc/skilltree/) | The universal, community-driven skill tree repository for AI Agents |
 | [The Vibe Gazette](https://thevibegazette.lat) | Publicação sobre vibe coding e software 3.0 |
 | [Void Despair](https://leosdc.github.io/void-despair/) | Arcade de sobrevivência no universo de Lyra |
 | [OS Exploit](https://leosdc.github.io/OS-Exploit/) | Referência CLI minimalista e de alta performance |
