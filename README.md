@@ -1,6 +1,6 @@
 # Leonardo da Cruz
 
-Desenvolvedor com 10+ anos em TI, baseado em Joinville (SC). Trabalho principalmente com sistemas agênticos, automação e experimentos criativos com Canvas e partículas. Tenho um [perfil interativo](https://leosdc.github.io/Leosdc/) que faz mais sentido ver do que descrever.
+Especialista com 10+ anos em TI. Trabalho principalmente com sistemas agênticos, automação e experimentos criativos com Canvas e partículas. Tenho um [perfil interativo](https://leosdc.github.io/Leosdc/) que faz mais sentido ver do que descrever. Além disso, atuo diretamente com Infraestrutura, Segurança da Informação, Ciência de Dados e Gestão de Projetos.
 
 ---
 
