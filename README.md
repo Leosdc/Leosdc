@@ -3,7 +3,7 @@
 
 ---
 
-Currently focused on multi-agent architectures, orchestration with Gemini, and the intersection between Software 3.0 engineering and *Vibe Coding* (with security awareness and technical grounding) — which I write about at [The Vibe Gazette](https://thevibegazette.lat).
+Currently focused on multi-agent architectures, orchestration with Gemini, and the intersection between Software 3.0 engineering and *Vibe Coding* (with security awareness and technical grounding), which I write about at [The Vibe Gazette](https://thevibegazette.lat).
 
 **Areas I work in:**
 - Autonomous agents and multi-agent orchestration
