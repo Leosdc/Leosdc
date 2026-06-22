@@ -23,9 +23,7 @@ Currently focused on multi-agent architectures, orchestration with Gemini, and t
 | [The Vibe Gazette](https://thevibegazette.lat) | Publication on vibe coding and software 3.0 |
 | [Void Despair](https://leosdc.github.io/void-despair/) | Survival arcade set in the Lyra universe |
 | [OS Exploit](https://leosdc.github.io/OS-Exploit/) | Minimalist, high-performance CLI reference |
-| [Guia do Cidadão](https://leosdc.github.io/Guia-do-Cidadao/) | AI-powered legal access tool for Brazilian citizens |
 | [O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/) | Personal organizer for books, series, and films |
-| [Neon Wars](https://leosdc.github.io/territory/) | Neon-aesthetic territory conquest game |
 
 ---
 
