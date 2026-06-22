@@ -31,4 +31,3 @@ Currently focused on multi-agent architectures, orchestration with Gemini, and t
 
 ![](https://komarev.com/ghpvc/?username=Leosdc&style=flat-square&color=grey&label=profile+views)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-leonardo--da--cruz-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/leonardo-da-cruz)
-[![GitHub](https://img.shields.io/badge/GitHub-Leosdc-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Leosdc)
