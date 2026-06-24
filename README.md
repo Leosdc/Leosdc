@@ -33,5 +33,16 @@ Currently focused on multi-agent architectures, orchestration with Gemini, and t
 
 ---
 
+<p align="center">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Leosdc&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="Leonardo's GitHub Stats" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Leosdc&layout=compact&theme=tokyonight" alt="Top Languages" />
+  </a>
+</p>
+
+---
+
 ![](https://komarev.com/ghpvc/?username=Leosdc&style=flat-square&color=grey&label=profile+views)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-leonardo--da--cruz-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/leonardo-da-cruz)
