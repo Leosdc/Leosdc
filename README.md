@@ -9,7 +9,7 @@
 
 ---
 
-Currently focused on multi-agent architectures, orchestration with AI, and the intersection between Software 3.0 engineering and *Vibe Coding* (with security awareness and technical grounding), which I write about at [The Vibe Gazette](https://thevibegazette.lat).
+Currently focused on multi-agent architectures, orchestration with AI, and the intersection between Software 3.0 engineering and *Vibe Coding* (with security awareness and technical grounding).
 
 **Areas I work in:**
 - Autonomous agents and multi-agent orchestration
@@ -26,7 +26,7 @@ Currently focused on multi-agent architectures, orchestration with AI, and the i
 | [Lyra the Wise](https://lyrathewise.lat) | AI-powered tabletop RPG engine |
 | [Understand Anything Desktop](https://github.com/Leosdc/understand-anything-desktop/) | Desktop version of understand-anything, for generating graphs of your repositories |
 | [Skill Tree](https://github.com/Leosdc/skilltree/) | The universal, community-driven skill tree repository for AI Agents |
-| [The Vibe Gazette](https://thevibegazette.lat) | Publication on vibe coding and software 3.0 |
+| [Logitech G HUB Widget](https://github.com/Leosdc/logitech-ghub-widget) | Modern Windows 11 WinUI 3 widget & cross-platform CLI for Logitech G peripherals battery monitoring |
 | [Void Despair](https://leosdc.github.io/void-despair/) | Survival arcade set in the Lyra universe |
 | [OS Exploit](https://leosdc.github.io/OS-Exploit/) | Minimalist, high-performance CLI reference |
 | [O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/) | Personal organizer for books, series, and films |
