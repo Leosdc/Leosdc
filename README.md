@@ -5,7 +5,7 @@
 </picture>
 
 # Leonardo da Cruz
-10+ years in IT. I work mainly with agentic systems, automation, and creative experiments with Canvas and particles. I have an [interactive profile](https://leosdc.github.io/Leosdc/) that makes more sense to see than to describe. I also work directly with Infrastructure, Information Security, Data Science, and Project Management.
+10+ years in IT. I work mainly with agentic systems, automation, and creative experiments with Canvas and particles. I also work directly with Infrastructure, Information Security, Data Science, and Project Management.
 
 ---
 
