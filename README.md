@@ -30,6 +30,8 @@ Currently focused on multi-agent architectures, orchestration with AI, and the i
 | [Void Despair](https://leosdc.github.io/void-despair/) | Survival arcade set in the Lyra universe |
 | [OS Exploit](https://leosdc.github.io/OS-Exploit/) | Minimalist, high-performance CLI reference |
 | [O Mundo da Alice](https://leosdc.github.io/mundo-da-alice/) | Personal organizer for books, series, and films |
+| [Exploreio](https://github.com/Leosdc/exploreio/) | A CLI/terminal-based file manager inspired by Yazi, designed not only for navigating folders but also for opening and rendering files with high visual quality directly within the prompt—without relying on tools like bat, glow, jq, or external editors |
+| [Exploreio](https://github.com/Leosdc/termaid/) | A zero-dependency TypeScript/ESM library and CLI that interprets Mermaid diagrams and renders them in the terminal using a true 2D layout engine |
 
 ---
 
